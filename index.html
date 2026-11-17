@@ -180,6 +180,7 @@ m 4.56119,0 h -3.54862 v -5.38623 h 3.54862 v 0.63665 h -2.83239 v 1.47588 h 2.8
           </fieldset>
           <button class="entery__post-button" type="submit">
             <svg
+              class="entery__add-icon"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -194,8 +195,127 @@ m 4.56119,0 h -3.54862 v -5.38623 h 3.54862 v 0.63665 h -2.83239 v 1.47588 h 2.8
           </button>
         </form>
       </section>
-      <section class="filter"></section>
-      <section class=""></section>
+      <section class="filter">
+        <header class="filter__filter-header">
+          <h2 class="filter__title">Filter Logs</h2>
+        </header>
+        <form class="filter__form-filter" id="form-filter">
+          <fieldset>
+            <label class="filter__label-name" for="input-name"
+              >Filter by name</label
+            >
+            <input type="text" id="input-name" placeholder="John Doe" />
+          </fieldset>
+          <button type="submit" class="filter__filter-button">Filter</button>
+        </form>
+      </section>
+      <section class="logs">
+        <header class="logs__log-header">
+          <h2 class="logs__title">Log Post</h2>
+        </header>
+        <ul class="logs__log-list"></ul>
+      </section>
     </main>
+    <footer class="footer">
+      <nav class="footer__sitemap-nav">
+        <header class="footer__sitemap-header">
+          <h4 class="footer__sitemap-title">Session Utilities</h4>
+        </header>
+        <ul class="footer__sitemap-list">
+          <li class="footer__sitemap-list-item">
+            <a href="#" class="footer__sitemap-links">Live Session Planner</a>
+          </li>
+          <li class="footer__sitemap-list-item">
+            <a href="#" class="footer__sitemap-links">Equipment Profiles</a>
+          </li>
+          <li class="footer__sitemap-list-item">
+            <a href="#" class="footer__sitemap-links"
+              >Dark-Sky Map Integrations</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <nav class="footer__sitemap-nav">
+        <header class="footer__sitemap-header">
+          <h4 class="footer__sitemap-title">Data & Partiality</h4>
+        </header>
+        <ul class="footer__sitemap-list">
+          <li class="footer__sitemap-list-item">
+            <a href="#" class="footer__sitemap-links">Export Observations</a>
+          </li>
+          <li class="footer__sitemap-list-item">
+            <a href="#" class="footer__sitemap-links">Hardware Integrations</a>
+          </li>
+          <li class="footer__sitemap-list-item">
+            <a href="#" class="footer__sitemap-links"
+              >Local Storage & Backup Manager</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <nav class="footer__sitemap-nav">
+        <header class="footer__sitemap-header">
+          <h4 class="footer__sitemap-title">Support & Community</h4>
+        </header>
+        <ul class="footer__footer-list">
+          <li class="footer__sitemap-list-item">
+            <a href="#" class="footer__sitemap-links">Night-Mode Setup Guide</a>
+          </li>
+          <li class="footer__sitemap-list-item">
+            <a href="#" class="footer__sitemap-links"
+              >Bug Tracker & Feature Requests</a
+            >
+          </li>
+          <li class="footer__sitemap-list-item">
+            <a href="#" class="footer__sitemap-links"
+              >Developer Documentation</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="footer__social-media-nav">
+        <header class="footer__social-media-header">
+          <h4 class="footer__social-media-title">Follow Us</h4>
+        </header>
+        <ul class="footer__social-media-list">
+          <li class="footer__social-media-list-item">
+            <a
+              href="http://github.com"
+              class="footer__social-media-link"
+              target="_blank"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 6.35 6.35"
+              >
+                <path
+                  fill="currentColor"
+                  d="M3.175.529A2.646 2.646 0 0 0 .529 3.175a2.646 2.646 0 0 0 1.594 2.428c-.046-.073-.073-.159-.073-.252v-.965c0-.08.02-.157.056-.223A1.455 1.455 0 0 1 1.72 3.175c0-.356.128-.68.3-.93l-.05-.93.623.478h.001c.18-.088.38-.138.59-.138a1.455 1.455 0 0 1 .624.14l.831-.494-.188 1.094c.18.25.295.574.295.93a1.455 1.455 0 0 1-.386.988c.035.066.056.142.056.223v.965c0,.093-.027.179-.073.252A2.646 2.646 0 0 0 5.821 3.175 2.646 2.646 0 0 0 3.175.529Z"
+                /></svg
+            ></a>
+          </li>
+          <li class="footer__social-media-list-item">
+            <a
+              href="http://discord.com"
+              class="footer__social-media-link"
+              target="_blank"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 6.35 6.35"
+              >
+                <path
+                  fill="currentColor"
+                  d="M 1.6112712,0.96299033 0.02635499,1.7644918 0.97358401,5.3870098 2.7998291,4.4263449 H 3.587378 L 5.3764161,5.3870098 6.3236451,1.7644918 4.7387289,0.96299033 4.4131674,1.4895732 4.9082276,1.7278016 3.1750001,1.2513449 1.4417725,1.7278016 1.9368327,1.4895732 Z M 2.1166667,2.7065532 a 0.39687499,0.39687499 0 0 1 0.396875,0.396875 0.39687499,0.39687499 0 0 1 -0.396875,0.396875 0.39687499,0.39687499 0 0 1 -0.396875,-0.396875 0.39687499,0.39687499 0 0 1 0.396875,-0.396875 z m 2.1166667,0 a 0.39687499,0.39687499 0 0 1 0.396875,0.396875 0.39687499,0.39687499 0 0 1 -0.396875,0.396875 0.39687499,0.39687499 0 0 1 -0.396875,-0.396875 0.39687499,0.39687499 0 0 1 0.396875,-0.396875 z"
+                /></svg
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
   </body>
 </html>

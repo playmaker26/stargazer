@@ -1,0 +1,712 @@
+:root {
+  /*Light Theme*/
+  --light-theme-primary-color: #ffffff;
+  --light-theme-secondary-color: #060a22;
+  --light-theme-accent-color: #3b52ff;
+  --light-theme-hover-color: #6e81ff;
+
+  /*Dark Theme*/
+  --dark-theme-primary-color: #060a22;
+  --dark-theme-secondary-color: #ffffff;
+  --dark-theme-accent-color: #3b52ff;
+  --dark-theme-hover-color: #6e81ff;
+
+  /*Error Color*/
+  --error-color: red;
+
+  /*Font Family*/
+  --heading-font-family:
+    "Space Grotesk", "system-ui", "-apple-system", "sans-serif";
+  --body-font-family:
+    "Space Mono" "ui-monospace", "SFMono-Regular", "monospace";
+
+  /*Font Weight*/
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  /*Desktop Font Size*/
+  --desktop-fs-h1: 2rem;
+  --desktop-fs-h2: 1.75rem;
+  --desktop-fs-h3: 1.5rem;
+  --desktop-fs-h4: 1.25rem;
+  --desktop-fs-base: 1rem;
+  --desktop-fs-label: 0.875rem;
+  --desktop-fs-footer: 0.75rem;
+
+  /*Desktop Line Height*/
+  --desktop-lh-h1: 2.5rem;
+  --desktop-lh-h2: 2.25rem;
+  --desktop-lh-h3: 1.75rem;
+  --desktop-lh-h4: 1.5rem;
+  --desktop-lh-base: 1.5rem;
+  --desktop-lh-label: 1.25rem;
+  --desktop-lh-footer: 1rem;
+
+  /*Desktop Letter Spacing*/
+  --desktop-ls-h1: -0.01em;
+  --desktop-ls-h2: -0.02em;
+  --desktop-ls-h3: -0.03em;
+  --desktop-ls-h4: -0.04em;
+  --desktop-ls-base: 0em;
+  --desktop-ls-label: 0.01em;
+  --desktop-ls-footer: 0.02em;
+
+  /*Mobile Font Size*/
+  --mobile-fs-h1: 1.75rem;
+  --mobile-fs-h2: 1.5rem;
+  --mobile-fs-h3: 1.25rem;
+  --mobile-fs-h4: 1rem;
+  --mobile-fs-base: 0.875rem;
+  --mobile-fs-label: 0.75rem;
+  --mobile-fs-footer: 0.75rem;
+
+  /*Mobile Line Height*/
+  --mobile-lh-h1: 2.25rem;
+  --mobile-lh-h2: 1.75rem;
+  --mobile-lh-h3: 1.5rem;
+  --mobile-lh-h4: 1.5rem;
+  --mobile-lh-base: 1.25rem;
+  --mobile-lh-label: 1rem;
+  --mobile-lh-footer: 1rem;
+
+  /*Mobile Letter Spacing*/
+  --mobile-ls-h1: -0.01em;
+  --mobile-ls-h2: -0.02em;
+  --mobile-ls-h3: -0.03em;
+  --mobile-ls-h4: 0em;
+  --mobile-ls-base: 0em;
+  --mobile-ls-label: 0.01em;
+  --mobile-ls-footer: 0.02em;
+
+  /*Outer Border*/
+  --outer-border: 1px solid #3b52ff;
+  --second-outer-border: 1px solid #060a22;
+
+  /*Hover Animation*/
+  --hover-transition: all ease-in-out 0.2s;
+
+  /*Spacing*/
+  --spacing-times-one: 0.25rem;
+  --spacing-times-two: 0.5rem;
+  --spacing-times-three: 0.75rem;
+  --spacing-times-four: 1rem;
+  --spacing-times-six: 1.5rem;
+
+  /*Corner Radius*/
+  --outer-corner: 0.25rem;
+}
+
+/*Start Global CSS*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--light-theme-primary-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--heading-font-family);
+  color: var(--light-theme-secondary-color);
+}
+
+h1 {
+  font-weight: var(--fw-bold);
+}
+
+h2,
+h3,
+h4 {
+  font-weight: var(--fw-medium);
+}
+
+p,
+a,
+input,
+label {
+  font-family: var(--body-font-family);
+  font-weight: var(--fw-regular);
+  color: var(--light-theme-secondary-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header a {
+  padding: var(--spacing-times-three) 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.icon-star,
+.icon-telescope {
+  fill: var(--light-theme-accent-color);
+}
+
+.text-title,
+.text-subtitle {
+  fill: var(--light-theme-secondary-color);
+
+  footer {
+    width: 100%;
+    background-color: var(--light-theme-primary-color);
+  }
+}
+
+/*End Global CSS*/
+
+/*Start JavaScript CSS*/
+
+/*End JavaScript CSS*/
+
+/*Start of Responsive Design*/
+@media only screen and (max-width: 767px) {
+  .main-header a {
+    width: 200px;
+    display: block;
+  }
+
+  .main-header a svg {
+    width: 100%;
+    display: block;
+  }
+
+  .main-header nav {
+    width: 104px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-header nav ul {
+    display: flex;
+    width: 100%;
+    gap: var(--spacing-times-two);
+    justify-content: flex-end;
+  }
+
+  .main-header nav ul li button {
+    padding: var(--spacing-times-three);
+    border: none;
+    appearance: none;
+    background: none;
+  }
+
+  .main-header nav ul li button .main-header__light-theme {
+    color: var(--light-theme-accent-color);
+  }
+
+  .main-header nav ul li button .main-header__dark-theme {
+    color: var(--light-theme-secondary-color);
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-times-four);
+    flex-direction: column;
+  }
+
+  main .entery,
+  main .filter,
+  main .logs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-times-six);
+    flex-direction: column;
+  }
+
+  main .filter,
+  main .logs {
+    display: none;
+  }
+
+  main .entery header,
+  main .filter header,
+  main .logs header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 328px;
+  }
+
+  main .entery header h1 {
+    font-size: var(--mobile-fs-h1);
+    line-height: var(--mobile-lh-h1);
+    letter-spacing: var(--mobile-ls-h1);
+  }
+
+  main .entery form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--spacing-times-four);
+    background-color: var(--light-theme-primary-color);
+    border: var(--outer-border);
+    border-radius: var(--outer-corner);
+    padding: var(--spacing-times-four) var(--spacing-times-six);
+    width: 328px;
+  }
+
+  main .entery form fieldset,
+  main .filter form fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--spacing-times-two);
+    width: 100%;
+  }
+
+  main .entery form fieldset label,
+  main .filter form fieldset label {
+    font-size: var(--mobile-fs-label);
+    line-height: var(--mobile-lh-label);
+    letter-spacing: var(--mobile-ls-label);
+  }
+
+  main .entery form fieldset input,
+  main .filter form fieldset input {
+    padding: var(--spacing-times-two);
+    width: 100%;
+    border-radius: var(--outer-corner);
+    border: var(--second-outer-border);
+  }
+
+  main .entery form fieldset textarea {
+    padding: var(--spacing-times-two);
+    resize: none;
+    width: 100%;
+    min-height: 200px;
+  }
+
+  main .entery form button {
+    background-color: var(--light-theme-accent-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: var(--second-outer-border);
+    border-radius: var(--outer-corner);
+    color: var(--light-theme-primary-color);
+    font-size: var(--mobile-fs-base);
+    font-weight: var(--fw-bold);
+    padding: var(--spacing-times-one) var(--spacing-times-four);
+    font-family: var(--body-font-family);
+  }
+
+  main .filter header h2,
+  main .logs header h2 {
+    font-size: var(--mobile-fs-h2);
+    line-height: var(--mobile-lh-h2);
+    letter-spacing: var(--mobile-ls-h2);
+  }
+
+  main .filter form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: var(--spacing-times-two);
+    padding: var(--spacing-times-two) var(--spacing-times-four);
+    background-color: var(--light-theme-primary-color);
+    border: var(--outer-border);
+    border-radius: var(--outer-corner);
+    width: 328px;
+  }
+
+  main .filter form button {
+    width: 112px;
+    padding: var(--spacing-times-one) var(--spacing-times-four);
+    background-color: var(--light-theme-accent-color);
+    color: var(--light-theme-primary-color);
+    font-family: var(--body-font-family);
+    font-weight: var(--fw-bold);
+    text-align: center;
+    border: var(--second-outer-border);
+    border-radius: var(--outer-corner);
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-times-four);
+  }
+
+  footer nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: var(--spacing-times-six);
+  }
+
+  footer nav header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  footer nav header h4 {
+    font-size: var(--mobile-fs-h4);
+    line-height: var(--mobile-lh-h4);
+    letter-spacing: var(--mobile-ls-h4);
+  }
+
+  footer nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: var(--spacing-times-four);
+  }
+
+  footer nav ul li a {
+    padding: var(--spacing-times-three) var(--spacing-times-four);
+    font-size: var(--mobile-fs-footer);
+    line-height: var(--mobile-lh-footer);
+    letter-spacing: var(--mobile-ls-footer);
+  }
+
+  footer .footer__social-media-nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: var(--spacing-times-four);
+  }
+  footer .footer__social-media-nav ul li a {
+    padding: var(--spacing-times-three);
+  }
+
+  footer .footer__social-media-nav ul li a svg {
+    color: var(--light-theme-accent-color);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .main-header a {
+    width: 200px;
+    display: block;
+  }
+
+  .main-header a svg {
+    width: 100%;
+    display: block;
+  }
+
+  .main-header nav {
+    width: 104px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-header nav ul {
+    display: flex;
+    width: 100%;
+    gap: var(--spacing-times-two);
+    justify-content: flex-end;
+  }
+
+  .main-header nav ul li button {
+    padding: var(--spacing-times-three);
+    border: none;
+    appearance: none;
+    background: none;
+  }
+
+  .main-header nav ul li button .main-header__light-theme {
+    color: var(--light-theme-accent-color);
+  }
+
+  .main-header nav ul li button .main-header__dark-theme {
+    color: var(--light-theme-secondary-color);
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "entry filter"
+      "logs logs";
+    margin-inline: auto;
+  }
+
+  main .entery {
+    grid-area: entry;
+  }
+
+  main .filter {
+    grid-area: filter;
+  }
+
+  main .logs {
+    grid-area: logs;
+  }
+
+  main .entery,
+  main .filter,
+  main .logs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-times-six);
+    flex-direction: column;
+  }
+
+  main .filter,
+  main .logs {
+    display: none;
+  }
+
+  main .entery header,
+  main .filter header,
+  main .logs header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+
+  main .entery header h1 {
+    font-size: var(--mobile-fs-h1);
+    line-height: var(--mobile-lh-h1);
+    letter-spacing: var(--mobile-ls-h1);
+  }
+
+  main .entery form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--spacing-times-four);
+    background-color: var(--light-theme-primary-color);
+    border: var(--outer-border);
+    border-radius: var(--outer-corner);
+    padding: var(--spacing-times-four) var(--spacing-times-six);
+    width: 704px;
+  }
+
+  main .entery form fieldset,
+  main .filter form fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--spacing-times-two);
+    width: 100%;
+  }
+
+  main .entery form fieldset label,
+  main .filter form fieldset label {
+    font-size: var(--mobile-fs-label);
+    line-height: var(--mobile-lh-label);
+    letter-spacing: var(--mobile-ls-label);
+  }
+
+  main .entery form fieldset input,
+  main .filter form fieldset input {
+    padding: var(--spacing-times-two);
+    width: 100%;
+    border-radius: var(--outer-corner);
+    border: var(--second-outer-border);
+  }
+
+  main .entery form fieldset textarea {
+    padding: var(--spacing-times-two);
+    resize: none;
+    width: 100%;
+    min-height: 200px;
+  }
+
+  main .entery form button {
+    background-color: var(--light-theme-accent-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: var(--second-outer-border);
+    border-radius: var(--outer-corner);
+    color: var(--light-theme-primary-color);
+    font-size: var(--mobile-fs-base);
+    font-weight: var(--fw-bold);
+    padding: var(--spacing-times-one) var(--spacing-times-four);
+    font-family: var(--body-font-family);
+    transition: var(--hover-transition);
+  }
+
+  main .filter header h2,
+  main .logs header h2 {
+    font-size: var(--mobile-fs-h2);
+    line-height: var(--mobile-lh-h2);
+    letter-spacing: var(--mobile-ls-h2);
+  }
+
+  main .filter form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: var(--spacing-times-two);
+    padding: var(--spacing-times-two) var(--spacing-times-four);
+    background-color: var(--light-theme-primary-color);
+    border: var(--outer-border);
+    border-radius: var(--outer-corner);
+    width: 352px;
+  }
+
+  main .filter form button {
+    width: 112px;
+    padding: var(--spacing-times-one) var(--spacing-times-four);
+    background-color: var(--light-theme-accent-color);
+    color: var(--light-theme-primary-color);
+    font-family: var(--body-font-family);
+    font-weight: var(--fw-bold);
+    text-align: center;
+    border: var(--second-outer-border);
+    border-radius: var(--outer-corner);
+    transition: var(--hover-transition);
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: var(--spacing-times-four);
+  }
+
+  footer nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: var(--spacing-times-six);
+  }
+
+  footer nav header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  footer nav header h4 {
+    font-size: var(--mobile-fs-h4);
+    line-height: var(--mobile-lh-h4);
+    letter-spacing: var(--mobile-ls-h4);
+  }
+
+  footer nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: var(--spacing-times-four);
+  }
+
+  footer nav ul li a {
+    padding: var(--spacing-times-three) var(--spacing-times-four);
+    font-size: var(--mobile-fs-footer);
+    line-height: var(--mobile-lh-footer);
+    letter-spacing: var(--mobile-ls-footer);
+  }
+
+  footer .footer__social-media-nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: var(--spacing-times-four);
+  }
+  footer .footer__social-media-nav ul li a {
+    padding: var(--spacing-times-three);
+  }
+
+  footer .footer__social-media-nav ul li a svg {
+    color: var(--light-theme-accent-color);
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .main-header a {
+    width: 240px;
+  }
+
+  main {
+    max-width: 1200px;
+    gap: var(--spacing-times-six);
+  }
+
+  main .entery header h1 {
+    font-size: var(--desktop-fs-h1);
+    line-height: var(--desktop-lh-h1);
+    letter-spacing: var(--desktop-ls-h1);
+  }
+
+  main .filter header h2,
+  main .logs header h2 {
+    font-size: var(--desktop-fs-h2);
+    line-height: var(--desktop-lh-h2);
+    letter-spacing: var(--desktop-ls-h2);
+  }
+
+  main .entery form {
+    width: 1200px;
+  }
+
+  main .filter form {
+    width: 588px;
+  }
+
+  main .entery form fieldset label,
+  main .filter form fieldset label {
+    font-size: var(--desktop-fs-label);
+    line-height: var(--desktop-lh-label);
+    letter-spacing: var(--desktop-ls-label);
+  }
+
+  main .entery form button {
+    font-size: var(--desktop-fs-base);
+  }
+
+  main .entery form button:hover,
+  main .filter form button:hover {
+    background-color: var(--light-theme-hover-color);
+    color: var(--light-theme-secondary-color);
+    border: none;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: var(--spacing-times-four);
+  }
+
+  footer nav header h4 {
+    font-size: var(--desktop-fs-h4);
+    line-height: var(--desktop-lh-h4);
+    letter-spacing: var(--desktop-ls-h4);
+  }
+
+  footer nav ul li a {
+    font-size: var(--desktop-fs-footer);
+    line-height: var(--desktop-lh-footer);
+    letter-spacing: var(--desktop-ls-footer);
+  }
+}
+/*End of Responsive Design*/
