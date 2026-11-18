@@ -91,6 +91,7 @@
   --spacing-times-two: 0.5rem;
   --spacing-times-three: 0.75rem;
   --spacing-times-four: 1rem;
+  --spacing-times-five: 1.25rem;
   --spacing-times-six: 1.5rem;
 
   /*Corner Radius*/
@@ -167,10 +168,49 @@ ul {
     background-color: var(--light-theme-primary-color);
   }
 }
-
 /*End Global CSS*/
 
 /*Start JavaScript CSS*/
+.darkmode {
+  background-color: var(--dark-theme-primary-color);
+}
+
+.darkmode h1,
+h2,
+h4 {
+  color: var(--dark-theme-secondary-color);
+}
+
+.darkmode .text-title,
+.darkmode .text-subtitle {
+  fill: var(--dark-theme-secondary-color);
+}
+
+.darkmode .main-header nav ul li button .main-header__dark-theme {
+  color: var(--dark-theme-accent-color);
+}
+
+.darkmode .main-header nav ul li button .main-header__light-theme {
+  color: var(--dark-theme-secondary-color);
+}
+
+.darkmode footer {
+  background-color: var(--dark-theme-primary-color);
+}
+
+.darkmode footer nav ul li a {
+  color: var(--dark-theme-secondary-color);
+}
+
+main .entery form fieldset input.error,
+main .entery form fieldset textarea.error {
+  border: 1px solid var(--error-color);
+}
+
+main .filter.visible,
+main .logs.visible {
+  display: flex;
+}
 
 /*End JavaScript CSS*/
 
