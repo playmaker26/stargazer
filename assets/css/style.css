@@ -167,6 +167,14 @@ ul {
     width: 100%;
     background-color: var(--light-theme-primary-color);
   }
+
+  input,
+  textarea {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #ffffff;
+    color: var(--light-theme-secondary-color);
+  }
 }
 /*End Global CSS*/
 
@@ -202,18 +210,10 @@ ul {
   color: var(--dark-theme-secondary-color);
 }
 
-main .entery form fieldset #name-input.error,
-main .entery form fieldset #location-input.error,
-main
-  .entery
-  form
-  fieldset
-  #date-input.error
-  main
-  .entery
-  form
-  fieldset
-  #notes.error {
+main .entery fieldset #name-input.error,
+main .entery fieldset #location-input.error,
+main .entery fieldset #date-input.error,
+main .entery fieldset #notes.error {
   border: 1px solid var(--error-color);
 }
 
@@ -271,6 +271,14 @@ main .logs.visible {
     align-items: center;
     gap: var(--spacing-times-four);
     flex-direction: column;
+  }
+
+  input,
+  textarea {
+    font-size: var(--mobile-fs-base);
+    line-height: var(--mobile-lh-base);
+    letter-spacing: var(--mobile-ls-base);
+    font-weight: var(--fw-regular);
   }
 
   main .entery,
@@ -594,6 +602,14 @@ main .logs.visible {
     margin-inline: auto;
   }
 
+  input,
+  textarea {
+    font-size: var(--mobile-fs-base);
+    line-height: var(--mobile-lh-base);
+    letter-spacing: var(--mobile-ls-base);
+    font-weight: var(--fw-regular);
+  }
+
   main .entery {
     grid-area: entry;
   }
@@ -907,6 +923,13 @@ main .logs.visible {
     font-size: var(--desktop-fs-h2);
     line-height: var(--desktop-lh-h2);
     letter-spacing: var(--desktop-ls-h2);
+  }
+
+  input,
+  textarea {
+    font-size: var(--desktop-fs-base);
+    line-height: var(--desktop-lh-base);
+    letter-spacing: var(--desktop-ls-base);
   }
 
   main .entery form {

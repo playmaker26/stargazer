@@ -15,30 +15,27 @@ if(themeButton.dataset.theme === 'dark') {
 themeToggle();
 
 function checkForm() {
-let entryForm = document.querySelector('#post-form');
-let nameField = document.querySelector('#name-input');
-let locationField = document.querySelector('#location-input');
-let dateField  = document.querySelector('#date-input');
-let notesField = document.querySelector('#notes');
+let entryForm = document.querySelector('.entery__post-form');
 
-entryForm.addEventListener('submit', (e) => {
-e.preventDefault();
+const FIELDS = [
+    document.querySelector('#name-input'),
+    document.querySelector('#location-input'),
+    document.querySelector('#date-input'),
+    document.querySelector('#notes')
+];
 
-if(nameField.value.trim() === '') {
-    nameField.classList.add('error');
-}else if(locationField.value.trim() === '') {
-locationField.classList.add('error');
-}else if(dateField.value.trim() === '') {
-    dateField.classList.add('error');
-}else if(notesField.value.trim() === '') {
-    notesField.classList.add('error');
-}else {
-     nameField.classList.remove('error');
-     locationField.classList.remove('error');
-     dateField.classList.remove('error');
-     notesField.classList.remove('error');
-     postLogs();
-}
+ entryForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    FIELDS.forEach((fields) => {
+fields.classList.toggle('error', fields.value.trim() === '');
+    });
+
+    const ISFORMVALID = FIELDS.every((fields) => fields.value.trim() !== '');
+
+    if(ISFORMVALID) {
+        postLogs();
+    }
 });
 }
 checkForm();
@@ -127,3 +124,32 @@ locationField.value = '';
 dateField.value = '';
 notesField.value = '';
 }
+
+function filterLogs() {
+let filterForm = document.querySelector('.filter__form-filter');
+let filterField = document.querySelector('#input-filter');
+
+filterForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let currentValue = filterField.value.trim().toLowerCase();
+
+    let observerName = document.querySelectorAll('.logs__observer-name');
+    let hasMatch = false;
+
+    observerName.forEach((name) => {
+        let logCard = name.closest('.logs__list-item');
+
+        if(name.textContent.toLocaleLowerCase().includes(currentValue)) {
+            logCard.style.display = 'flex';
+            hasMatch = true;
+        }else {
+            logCard.style.display = 'none';
+        }
+    });
+
+    if(!hasMatch && observerName.length > 0) {
+        alert('No observer with that name exists');
+    }
+});
+}
+filterLogs();
